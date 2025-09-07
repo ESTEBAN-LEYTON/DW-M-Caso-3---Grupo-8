@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Prácticas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validacionesregistro.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo del sistema">
+      <h1>Sistema de Gestión de Prácticas</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registro.html" class="activo">Registro</a></li>
+        <li><a href="documentos.html">Documentación</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Formulario -->
+  <main>
+    <div class="formulario-contenedor">
+      <h2>Registrar Práctica</h2>
+      <form id="formRegistro">
+        <div class="campo">
+          <label>Nombre Alumno:</label>
+          <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+          <span class="error" id="error-nombre"></span>
+        </div>
+        <div class="campo">
+          <label>RUT:</label>
+          <input type="text" id="rut" placeholder="Ej: 21200157-0" required>
+          <span class="error" id="error-rut"></span>
+        </div>
+        <div class="campo">
+          <label>Carrera:</label>
+          <input type="text" id="carrera" placeholder="Ej: Ingeniería Informática" required>
+          <span class="error" id="error-carrera"></span>
+        </div>
+        <div class="campo">
+          <label>Correo:</label>
+          <input type="email" id="correo" placeholder="Ej: alumno@correo.com" required>
+          <span class="error" id="error-correo"></span>
+        </div>
+        <div class="campo">
+          <label>Tipo de práctica:</label>
+          <select id="tipo_practica" required>
+            <option value="">Seleccione...</option>
+            <option value="laboral">Laboral (240 hrs)</option>
+            <option value="profesional">Profesional (360 hrs)</option>
+          </select>
+          <span class="error" id="error-tipo"></span>
+        </div>
+        <div class="campo">
+          <label>Fecha inicio:</label>
+          <input type="date" id="fecha_inicio" required>
+          <span class="error" id="error-fecha"></span>
+        </div>
+        <div class="campo">
+          <label>Fecha término:</label>
+          <input type="date" id="fecha_termino" readonly>
+        </div>
+        <div class="campo">
+          <label>Empresa:</label>
+          <input type="text" id="empresa" placeholder="Ej: Banco de Chile" required>
+          <span class="error" id="error-empresa"></span>
+        </div>
+        <div class="campo">
+          <label>Jefe Directo:</label>
+          <input type="text" id="jefe" placeholder="Ej: Carlos Muñoz" required>
+          <span class="error" id="error-jefe"></span>
+        </div>
+        <div class="campo">
+          <label>Contacto Teléfono:</label>
+          <input type="tel" id="telefono" placeholder="Ej: 987654321" required>
+          <span class="error" id="error-telefono"></span>
+        </div>
+        <div class="campo">
+          <label>Correo Empresa:</label>
+          <input type="email" id="correo_empresa" placeholder="Ej: empresa@correo.cl" required>
+          <span class="error" id="error-correo-empresa"></span>
+        </div>
+        <div class="campo">
+          <label>Fotografía:</label>
+          <input type="file" id="foto" accept="image/png, image/jpeg" required>
+          <span class="error" id="error-foto"></span>
+        </div>
+        <div class="campo">
+          <label>Documento (PDF/Word, máx. 1MB):</label>
+          <input type="file" id="documento" accept=".pdf,.doc,.docx">
+          <span class="error" id="error-documento"></span>
+        </div>
+        <button type="submit" class="btn">Guardar Práctica</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Sistema de Prácticas - Escuela de Informática</p>
+  </footer>
+</body>
+</html>

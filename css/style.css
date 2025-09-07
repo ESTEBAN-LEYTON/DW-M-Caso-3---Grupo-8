@@ -30,7 +30,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 50px;
+    width: 250px;
 }
 
 nav ul {
@@ -54,7 +54,7 @@ nav a:hover, nav .activo {
     text-align: center;
     padding: 50px 20px;
     background: url('../img/banner.jpg') no-repeat center/cover;
-    color: white;
+    color: rgb(73, 73, 73);
 }
 
 .banner h2 {
