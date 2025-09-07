@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Gestión de Prácticas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Sistema de Prácticas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html" class="activo">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="documentos.html">Documentación</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="formulario-contenedor">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="campo">
+                    <label for="usuario">Usuario (RUT o correo):</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="ej: 12345678-9 o correo@dominio.com">
+                </div>
+
+                <div class="campo">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="********">
+                </div>
+
+                <button type="submit" class="btn">Ingresar</button>
+                <p id="mensajeError" class="error"></p>
+            </form>
+
+            <p class="extra">
+                ¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sistema de Prácticas - Escuela de Informática</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
