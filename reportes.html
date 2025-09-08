@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- Encabezado de todos-->
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo del sistema">
+        <h1>Reporte de Prácticas</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="documentos.html">Documentación</a></li>
+            <li><a href="reportes.html" class="activo">Reportes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="tabla-reportes">
+        <table class="tablaSemestres">
+            <thead>
+            <tr>
+                <th>Semestre</th>
+                <th>Estudiantes</th>
+                <th>Notas promedio</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="semestre" data-semestre="1">Semestre 2025-1</td>
+                <td>120</td>
+                <td>5.1</td>
+            </tr>
+            <tr>
+                <td class="semestre" data-semestre="2">Semestre 2025-2</td>
+                <td>115</td>
+                <td>5.4</td>
+            </tr>
+            <tr>
+                <td class="semestre" data-semestre="3">Semestre 2026-1</td>
+                <td>130</td>
+                <td>5.3</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="grafico-reportes">
+        <canvas id="reportChart"></canvas>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/reportes.js"></script>
+</main>
+
+<footer>
+    <p>© 2025 Mi Proyecto Web</p>
+</footer>
+</body>
+</html>
