@@ -241,3 +241,54 @@ footer {
 .tablaSemestres td.semestre:hover {
     color: #0056b3;
 }
+
+/*documentos*/
+body.documentos {
+    background: #f4f4f4;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #2c3e50;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #2980b9;
+    color: #fff;
+}
+tr:hover {
+    background: #f1f1f1;
+}
+.upload-section {
+    margin-top: 32px;
+}
+.btn {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #21618c;
+}
+.pdf-icon {
+    color: #e74c3c;
+    margin-right: 8px;
+}
