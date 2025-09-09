@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Documentación de Práctica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="documentos">
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo del sistema">
+            <h1>Sistema de Gestión de Prácticas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="documentos.html" class="activo">Documentación</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Repositorio de Documentos de Práctica</h1>
+        <p>Descarga y carga de informes en PDF asociados a los alumnos. Solo docentes y coordinadores pueden subir documentos.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alumno</th>
+                    <th>Documento</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="documentos-lista">
+                <!-- Ejemplo de documento -->
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td><span class="pdf-icon">📄</span>Informe Práctica.pdf</td>
+                    <td>2025-09-01</td>
+                    <td><a href="#" class="btn" download>Descargar</a></td>
+                </tr>
+                <!-- Más documentos se agregan dinámicamente -->
+            </tbody>
+        </table>
+        <div class="upload-section">
+            <h2>Subir nuevo informe (PDF)</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="alumno">Alumno:</label>
+                <input type="text" id="alumno" name="alumno" required>
+                <br><br>
+                <label for="documento">Selecciona PDF:</label>
+                <input type="file" id="documento" name="documento" accept="application/pdf" required>
+                <br><br>
+                <button type="submit" class="btn">Subir Documento</button>
+            </form>
+            <p id="uploadMsg"></p>
+        </div>
+    </div>
+    <script>
+        // Simulación de carga y listado (sin backend)
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const alumno = document.getElementById('alumno').value;
+            const fileInput = document.getElementById('documento');
+            const file = fileInput.files[0];
+            if (file && file.type === 'application/pdf') {
+                const fecha = new Date().toISOString().split('T')[0];
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${alumno}</td><td><span class='pdf-icon'>📄</span>${file.name}</td><td>${fecha}</td><td><a href='#' class='btn' download>Descargar</a></td>`;
+                document.getElementById('documentos-lista').appendChild(row);
+                document.getElementById('uploadMsg').textContent = 'Documento subido correctamente (simulado, no se guarda en el servidor).';
+                fileInput.value = '';
+                document.getElementById('alumno').value = '';
+            } else {
+                document.getElementById('uploadMsg').textContent = 'Por favor selecciona un archivo PDF válido.';
+            }
+        });
+    </script>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Sistema de Prácticas - Escuela de Informática</p>
+    </footer>
+</body>
+</html>
